@@ -9,6 +9,13 @@ services:
       - 80:80
     networks:
       - vdt_network
+  watchtower:
+    image: containrrr/watchtower
+    environment:
+      -  WATCHTOWER_POLL_INTERVAL=60 # Poll every 60 seconds
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    container_name: watchtower
 
 networks:
   vdt_network:
