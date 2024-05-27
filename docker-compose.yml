@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web:
+    build: 
+      context: vdt-frontend
+      dockerfile: Dockerfile
+    image: qdgiang/vdt_frontend
+    ports:
+      - 80:80
+    networks:
+      - vdt_network
+
+networks:
+  vdt_network:
+    name: vdt_network
+    external: true
+      
+    
