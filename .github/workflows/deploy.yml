@@ -24,4 +24,4 @@ jobs:
       with:
         context: vdt-frontend
         push: true
-        tags: qdgiang/demo-github-actions
+        tags: qdgiang/vdt_frontend:latest
